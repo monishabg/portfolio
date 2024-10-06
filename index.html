@@ -16,12 +16,14 @@
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
+            <a href="#services">Skills</a>
+            <a href="#portfolio">Portfolio</a>
             <a href="#contact">Contact</a>
         </nav>
 
         <div class="bx bx-moon" id="darkMode-icon"> </div>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
     </header>
 
     <!-- home design-->
@@ -40,8 +42,144 @@
 
             <a href="#" class="btn">Download CV</a>
         </div>
+
+        <div class="profession-container">
+            <div class="profession-box">
+                <div class="profession" style="--i:0;">
+                    <i class='bx bx-code-alt'></i>
+                    <h3>Web Developer</h3>
+                </div>
+           
+                <div class="profession" style="--i:1;">
+                    <i class='bx bx-code-curly'></i>
+                    <h3>Software Developer</h3>
+                </div>
+        
+                <div class="profession" style="--i:2;">
+                    <i class='bx bxs-music'></i>
+                    <h3>Singer</h3>
+                </div>
+                <div class="profession" style="--i:3;">
+                    <i class='bx bx-camera'></i>
+                    <h3>Photographer</h3>
+                </div>
+                <div class="circle"></div>
+            </div>
+            <div class="overlay"></div>
+        </div>
+        <div class="home-img">
+            <img src="images/home.jpg" alt="Home image">
+        </div>
     </section>
-   
-   
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/about.png" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Hi, new learner</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin consectetur ex, 
+                in pharetra metus consectetur ac. Nulla facilisi. Sed ultricies, lectus ut consectetur 
+                fermentum, velit velit semper velit, in fermentum lectus nunc vel velit. Sed facilisis, 
+                justo vel tincidunt consectetur, libero urna placerat velit, vel pellentesque justo 
+                mauris non massa. Sed ac est non felis bibendum luctus.</p>
+        <a href ="#" class="btn">Read More</a>
+        </div>
+    </section>
+
+
+    <section class="services" id="services">
+        <h2 class="heading"><span>Skills</span></h2>
+        <div class="services-container">
+            
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Web Development</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quam vel soluta earum aut possimus facere, a iure magnam laudantium minima alias cum est! Similique corrupti quis totam et culpa?</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bx-cloud'></i>
+                <h3>Cloud Technology</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quam vel soluta earum aut possimus facere, a iure magnam laudantium minima alias cum est! Similique corrupti quis totam et culpa?</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Software Development</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quam vel soluta earum aut possimus facere, a iure magnam laudantium minima alias cum est! Similique corrupti quis totam et culpa?</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+
+        </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+
+        <h2 class="heading">Latest <span>Projects</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+
+                <img src="images/portfolio1.webp" alt="">
+
+                <div class="portfolio-layer">
+                    <h4>Project Name</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+
+                <img src="images/portfolio2.jpeg" alt="">
+
+                <div class="portfolio-layer">
+                    <h4>Project Name</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+
+                <img src="images/portfolio3.png" alt="">
+
+                <div class="portfolio-layer">
+                    <h4>Project Name</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Mobile Number">
+                <input type="text" placeholder="Email Subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 Monisha B G. All rights reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+
+    <script src="app.js"></script>
 </body>
 </html>
