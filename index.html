@@ -2,184 +2,218 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-Ua-Compatible" content="Ie=edge">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <title>My Portfolio Website</title>
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monisha B G | Portfolio</title>
+    <meta name="description" content="Professional portfolio of Monisha B G, Student Developer">
     
-    <link href = 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel ='stylesheet'>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
-        <a href="#" class="logo">Portfolio</a>
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Skills</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="container">
+            <a href="#" class="logo">MBG</a>
+            
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </nav>
 
-        <div class="bx bx-moon" id="darkMode-icon"> </div>
-
-        <div class="bx bx-menu" id="menu-icon"></div>
+            <div class="header-actions">
+                <div class="bx bx-moon" id="darkMode-icon"></div>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+        </div>
     </header>
 
-    <!-- home design-->
-     <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hello, I am</h3>
-            <h1>Monisha B G</h1>
-            <p>I am a Student developer, eager to learn about technology.</p>
-            
-            <div class="social-media">
-                <a href="#"><i class='bx bxl-linkedin' ></i></a>
-                <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
-                <a href="#"><i class='bx bxl-github' ></i></a>
-                <a href="#"><i class='bx bxl-youtube' ></i></a>
+    <!-- Hero Section -->
+    <section class="home" id="home">
+        <div class="container">
+            <div class="home-content">
+                <h3 class="home-subtitle">Hello, I'm</h3>
+                <h1 class="home-title">Monisha B G</h1>
+                <p class="home-description">A passionate Student Developer eager to explore and create with technology.</p>
+                
+                <div class="social-media">
+                    <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#" aria-label="Instagram"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="#" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="#" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
+                </div>
+
+                <a href="#" class="btn btn-primary">Download CV</a>
             </div>
 
-            <a href="#" class="btn">Download CV</a>
+            <div class="profession-container">
+                <div class="profession-box">
+                    <div class="profession" style="--i:0;">
+                        <i class='bx bx-code-alt'></i>
+                        <h3>Web Developer</h3>
+                    </div>
+               
+                    <div class="profession" style="--i:1;">
+                        <i class='bx bx-code-curly'></i>
+                        <h3>Software Developer</h3>
+                    </div>
+            
+                    <div class="profession" style="--i:2;">
+                        <i class='bx bxs-music'></i>
+                        <h3>Singer</h3>
+                    </div>
+                    <div class="profession" style="--i:3;">
+                        <i class='bx bx-camera'></i>
+                        <h3>Photographer</h3>
+                    </div>
+                    <div class="circle"></div>
+                </div>
+                <div class="overlay"></div>
+            </div>
+            
+            <div class="home-img">
+                <img src="assets/images/home.jpg" alt="Monisha B G" loading="lazy">
+            </div>
         </div>
+    </section>
 
-        <div class="profession-container">
-            <div class="profession-box">
-                <div class="profession" style="--i:0;">
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="about-img">
+                <img src="assets/images/about.png" alt="About Monisha" loading="lazy">
+            </div>
+            
+            <div class="about-content">
+                <h2 class="section-heading">About <span>Me</span></h2>
+                <h3 class="about-subtitle">Hi, I'm a passionate learner</h3>
+                <p class="about-description">
+                    I'm a student developer with a strong passion for technology and creative problem-solving. 
+                    Currently expanding my knowledge in web development, software engineering, and cloud technologies. 
+                    I enjoy turning complex problems into simple, beautiful solutions.
+                </p>
+                <p class="about-description">
+                    When I'm not coding, you can find me singing, taking photographs, or exploring new technologies.
+                </p>
+                <a href="#" class="btn btn-secondary">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+        <div class="container">
+            <h2 class="section-heading">My <span>Skills</span></h2>
+            
+            <div class="skills-container">
+                <div class="skills-box">
                     <i class='bx bx-code-alt'></i>
-                    <h3>Web Developer</h3>
+                    <h3>Web Development</h3>
+                    <p>Building responsive and interactive websites using modern technologies like HTML5, CSS3, JavaScript, and frameworks.</p>
+                    <a href="#" class="btn btn-secondary">Read More</a>
                 </div>
-           
-                <div class="profession" style="--i:1;">
+
+                <div class="skills-box">
+                    <i class='bx bx-cloud'></i>
+                    <h3>Cloud Technology</h3>
+                    <p>Experience with cloud platforms and services, understanding of cloud architecture and deployment strategies.</p>
+                    <a href="#" class="btn btn-secondary">Read More</a>
+                </div>
+
+                <div class="skills-box">
                     <i class='bx bx-code-curly'></i>
-                    <h3>Software Developer</h3>
+                    <h3>Software Development</h3>
+                    <p>Developing efficient software solutions with clean code principles and problem-solving approaches.</p>
+                    <a href="#" class="btn btn-secondary">Read More</a>
                 </div>
-        
-                <div class="profession" style="--i:2;">
-                    <i class='bx bxs-music'></i>
-                    <h3>Singer</h3>
-                </div>
-                <div class="profession" style="--i:3;">
-                    <i class='bx bx-camera'></i>
-                    <h3>Photographer</h3>
-                </div>
-                <div class="circle"></div>
             </div>
-            <div class="overlay"></div>
-        </div>
-        <div class="home-img">
-            <img src="images/home.jpg" alt="Home image">
-        </div>
-    </section>
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="images/about.png" alt="">
-        </div>
-        <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2>
-            <h3>Hi, new learner</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin consectetur ex, 
-                in pharetra metus consectetur ac. Nulla facilisi. Sed ultricies, lectus ut consectetur 
-                fermentum, velit velit semper velit, in fermentum lectus nunc vel velit. Sed facilisis, 
-                justo vel tincidunt consectetur, libero urna placerat velit, vel pellentesque justo 
-                mauris non massa. Sed ac est non felis bibendum luctus.</p>
-        <a href ="#" class="btn">Read More</a>
         </div>
     </section>
 
-
-    <section class="services" id="services">
-        <h2 class="heading"><span>Skills</span></h2>
-        <div class="services-container">
+    <!-- Portfolio Section -->
+    <section class="portfolio section" id="portfolio">
+        <div class="container">
+            <h2 class="section-heading">Latest <span>Projects</span></h2>
             
-            <div class="services-box">
-                <i class='bx bx-code-alt'></i>
-                <h3>Web Development</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quam vel soluta earum aut possimus facere, a iure magnam laudantium minima alias cum est! Similique corrupti quis totam et culpa?</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
+            <div class="portfolio-container">
+                <div class="portfolio-box">
+                    <img src="assets/images/portfolio1.webp" alt="Web Development Project" loading="lazy">
+                    <div class="portfolio-layer">
+                        <h4>E-Commerce Website</h4>
+                        <p>A fully responsive online store with product catalog and checkout system.</p>
+                        <a href="#" aria-label="View project"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
 
-            <div class="services-box">
-                <i class='bx bx-cloud'></i>
-                <h3>Cloud Technology</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quam vel soluta earum aut possimus facere, a iure magnam laudantium minima alias cum est! Similique corrupti quis totam et culpa?</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
+                <div class="portfolio-box">
+                    <img src="assets/images/portfolio2.jpeg" alt="Cloud Application" loading="lazy">
+                    <div class="portfolio-layer">
+                        <h4>Cloud Storage App</h4>
+                        <p>Secure file storage application with user authentication and encryption.</p>
+                        <a href="#" aria-label="View project"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
 
-            <div class="services-box">
-                <i class='bx bx-code-alt'></i>
-                <h3>Software Development</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quam vel soluta earum aut possimus facere, a iure magnam laudantium minima alias cum est! Similique corrupti quis totam et culpa?</p>
-                <a href="#" class="btn">Read More</a>
+                <div class="portfolio-box">
+                    <img src="assets/images/portfolio3.png" alt="Mobile Application" loading="lazy">
+                    <div class="portfolio-layer">
+                        <h4>Task Management App</h4>
+                        <p>Productivity application for organizing and tracking daily tasks.</p>
+                        <a href="#" aria-label="View project"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
             </div>
-
         </div>
     </section>
-    <section class="portfolio" id="portfolio">
 
-        <h2 class="heading">Latest <span>Projects</span></h2>
-        <div class="portfolio-container">
-            <div class="portfolio-box">
-
-                <img src="images/portfolio1.webp" alt="">
-
-                <div class="portfolio-layer">
-                    <h4>Project Name</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <h2 class="section-heading">Contact <span>Me!</span></h2>
+            
+            <form action="#" class="contact-form">
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
                 </div>
-            </div>
-
-            <div class="portfolio-box">
-
-                <img src="images/portfolio2.jpeg" alt="">
-
-                <div class="portfolio-layer">
-                    <h4>Project Name</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
+                <div class="input-box">
+                    <input type="tel" placeholder="Mobile Number">
+                    <input type="text" placeholder="Email Subject">
                 </div>
-            </div>
-
-            <div class="portfolio-box">
-
-                <img src="images/portfolio3.png" alt="">
-
-                <div class="portfolio-layer">
-                    <h4>Project Name</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
+                <textarea cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
         </div>
+    </section>
 
-    </section>
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span></h2>
-        <form action="#">
-            <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
-            </div>
-            <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
-            </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </form>
-    </section>
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2024 Monisha B G. All rights reserved.</p>
-        </div>
-        <div class="footer-iconTop">
-            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        <div class="container">
+            <div class="footer-text">
+                <p>&copy; <span id="current-year"></span> Monisha B G. All Rights Reserved.</p>
+            </div>
+            
+            <div class="footer-iconTop">
+                <a href="#home" aria-label="Back to top"><i class='bx bx-up-arrow-alt'></i></a>
+            </div>
         </div>
     </footer>
 
-
+    <!-- JavaScript -->
     <script src="app.js"></script>
 </body>
 </html>
