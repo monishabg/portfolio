@@ -4,54 +4,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar');
     
     menuIcon.addEventListener('click', () => {
-        menuIcon.classList.toggle('bx-x');
         navbar.classList.toggle('active');
+        menuIcon.classList.toggle('bx-x');
     });
-    
-    // Close menu when clicking on a link
+
+    // Close mobile menu when clicking on a nav link
     document.querySelectorAll('.navbar a').forEach(link => {
         link.addEventListener('click', () => {
-            menuIcon.classList.remove('bx-x');
             navbar.classList.remove('active');
+            menuIcon.classList.remove('bx-x');
         });
     });
-    
+
     // Sticky Header
     window.addEventListener('scroll', () => {
         const header = document.querySelector('.header');
-        header.classList.toggle('scrolled', window.scrollY > 100);
+        header.classList.toggle('scrolled', window.scrollY > 50);
     });
-    
-    // Typed.js Animation
-    const typed = new Typed('.typed-text', {
-        strings: ['Web Developer', 'Software Engineer', 'Tech Enthusiast', 'Problem Solver'],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
-    
-    // Smooth Scrolling for Anchor Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 70,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-    
-    // Active Link Highlighting
+
+    // Active link highlighting
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.navbar a');
-    
+
     window.addEventListener('scroll', () => {
         let current = '';
         
@@ -63,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 current = section.getAttribute('id');
             }
         });
-        
+
         navLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === `#${current}`) {
@@ -71,35 +45,46 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // Form Submission
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+
+    // Smooth scrolling for all links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
             e.preventDefault();
             
-            // Get form values
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
             
-            // Here you would typically send the data to a server
-            console.log('Form submitted:', data);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Animation on scroll
+    const animateOnScroll = function() {
+        const elements = document.querySelectorAll('.skill-card, .portfolio-item, .about-image, .about-content, .contact-info, .contact-form');
+        
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
             
-            // Show success message
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
+            if (elementPosition < screenPosition) {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }
         });
-    }
-    
-    // Portfolio Filter (if you add more projects later)
-    // This is a placeholder for future functionality
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    if (filterButtons.length > 0) {
-        filterButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                // Filter logic would go here
-                console.log('Filter by:', this.dataset.filter);
-            });
-        });
-    }
+    };
+
+    // Set initial state for animated elements
+    document.querySelectorAll('.skill-card, .portfolio-item, .about-image, .about-content, .contact-info, .contact-form').forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(30px)';
+        element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    });
+
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll(); // Run once on page load
 });
